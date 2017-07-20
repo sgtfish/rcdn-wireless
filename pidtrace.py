@@ -1,10 +1,9 @@
 #!/usr/bin/python
 #
 import time
-import foo
 import RobotInverse
 import RobotGPIO
-import Mutlisensor_Road_Trip as Module2
+import Multisensor_Road_Trip as Module2
 import pdb
 
 # Trim:
@@ -64,14 +63,18 @@ def errorEval2(variable, ERROR_PREVIOUS):
   return error
     
 def calculatePID(ERROR, ERROR_PREVIOUS, I):
-  Kp = 30
+  Kp = 50
   Ki = .15
-  Kd = 80
+  Kd = 60
   P = ERROR
   I =  I + ERROR
   D = ERROR - ERROR_PREVIOUS
+  if I > 255:
+    I = 255
+  elif I < -255:
+    I = -255
   PIDvalue = (Kp*P) + (Ki*I) + (Kd*D)
-  #print "P: %s   I: %s   D: %s   PIDvalue: %s" % (P,I,D,PIDvalue)
+  print "P: %s   I: %s   D: %s   PIDvalue: %s" % (P,I,D,PIDvalue)
   return int(round(PIDvalue,0)), I
 
 def setMotorSpeeds(LSPEED, RSPEED):
@@ -138,7 +141,7 @@ def scaleSpeed(LSPEED, RSPEED):
   return LSPEED,RSPEED
 
 def main():
-  INIT_SPEED = 225
+  INIT_SPEED = 150
   ERROR_PREVIOUS = 0
   I = 0
   while(1):
@@ -151,15 +154,15 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       setMotorSpeeds(LSPEED, RSPEED)
     
-    if(RobotGPIO.detectFlame() == 1):
-       setMotorSpeeds(0,0)
-       Module2.detectedFlame()
-       setMotorSpeeds(LSPEED, RSPEED)
+    #if(RobotGPIO.detectFlame() == 1):
+       #setMotorSpeeds(0,0)
+       #Module2.detectedFlame()
+       #setMotorSpeeds(LSPEED, RSPEED)
 
-    if(RobotGPIO.detectObstacle() == 1):
-       setMotorSpeeds(0,0)
-       Module2.detectedObstacle()
-       setMotorSpeeds(LSPEED, RSPEED)
+    #if(RobotGPIO.detectObstacle() == 1):
+       #setMotorSpeeds(0,0)
+       #Module2.detectedObstacle()
+       #setMotorSpeeds(LSPEED, RSPEED)
 
     ERROR_PREVIOUS = ERROR
 

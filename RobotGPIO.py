@@ -18,7 +18,7 @@ GPIO.setup(REDPIN, GPIO.OUT)
 GPIO.setup(GREENPIN, GPIO.OUT)
 GPIO.setup(BLUEPIN, GPIO.OUT)
 GPIO.setup(BUZZERPIN, GPIO.OUT)
-GPIO.setup(FLAMEPIN, GPIO.IN, pull_up_down=GPIO.PUP_UP)
+GPIO.setup(FLAMEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(OBSTACLEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #------------Sensor Controls------------------------
