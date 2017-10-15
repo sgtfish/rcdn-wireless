@@ -13,18 +13,16 @@ import RobotGPIO
 import time
 
 def detectedObstacle():
-  if(RobotGPIO.detectObstacle() == 1):
-    RobotGPIO.redOn()
-    time.sleep(5)
-    RobotGPIO.buzzOn()
-    while(RobotGPIO.detectObstacle()):
-      #mmm drawing a blank
-    RobotGPIO.greenOn()
+  RobotGPIO.redOn()
+  time.sleep(5)
+  RobotGPIO.buzzOn()
+  while(RobotGPIO.detectObstacle()):
+    #mmm drawing a blank
+  RobotGPIO.greenOn()
 
 def detectedFlame():
-  if(RobotGPIO.detectFlame() == 1):
-    RobotGPIO.blueOn()
-    time.sleep(20)
-    RobotGPIO.greenOn()
+  RobotGPIO.blueOn()
+  time.sleep(20)
+  RobotGPIO.greenOn()
 
 

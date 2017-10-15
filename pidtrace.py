@@ -4,6 +4,7 @@ import time
 import foo
 import RobotInverse
 import RobotGPIO
+import Mutlisensor_Road_Trip as Module2
 import pdb
 
 # Trim:
@@ -149,6 +150,17 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       setMotorSpeeds(LSPEED, RSPEED)
+    
+    if(RobotGPIO.detectFlame() == 1):
+       setMotorSpeeds(0,0)
+       Module2.detectedFlame()
+       setMotorSpeeds(LSPEED, RSPEED)
+
+    if(RobotGPIO.detectObstacle() == 1):
+       setMotorSpeeds(0,0)
+       Module2.detectedObstacle()
+       setMotorSpeeds(LSPEED, RSPEED)
+
     ERROR_PREVIOUS = ERROR
 
 if __name__ == '__main__':
