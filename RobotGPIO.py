@@ -11,7 +11,7 @@ BLUEPIN = 13      # GPIO 27, pin 13
 BUZZERPIN = 15    # GPIO 22, pin 15
 #FLAMEPIN = xx    # GPIO 23, pin 16
 OBSTACLEPIN = 18  # GPIO 24, pin 18
-#TEMPREAD = 16    # Assigned in boot/config.txt
+#TEMPREAD = 4     # GPIO 4,  ping 7 Assigned in boot/config.txt
 
 GPIO.setup(RIGHT, GPIO.IN)
 GPIO.setup(LEFT, GPIO.IN)
