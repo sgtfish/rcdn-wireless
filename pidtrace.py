@@ -154,9 +154,9 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       setMotorSpeeds(LSPEED, RSPEED)
     
-    #if(RobotGPIO.detectFlame() == 1):
+    #if(RobotGPIO.read_temp() > 32):
        #setMotorSpeeds(0,0)
-       #Module2.detectedFlame()
+       #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
 
     #if(RobotGPIO.detectObstacle() == 1):
