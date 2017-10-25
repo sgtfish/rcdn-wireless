@@ -144,6 +144,8 @@ def main():
   INIT_SPEED = 150
   ERROR_PREVIOUS = 0
   I = 0
+  RobotGPIO.greenOn()
+
   while(1):
     ERROR = errorEval2(sensorRead(), ERROR_PREVIOUS)
     PIDvalue, I = calculatePID(ERROR, ERROR_PREVIOUS, I)
@@ -160,10 +162,10 @@ def main():
        #setMotorSpeeds(LSPEED, RSPEED)
     #print RobotGPIO.detectObstacle()
     if(RobotGPIO.detectObstacle() == 0):
-       print "Detected Obstacle = 0"
+       print "= 0"
        setMotorSpeeds(0,0)
        Module2.detectedObstacle()
-       print " = 1"
+       print "= 1"
        setMotorSpeeds(LSPEED, RSPEED)
     
     ERROR_PREVIOUS = ERROR

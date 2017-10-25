@@ -8,8 +8,8 @@ GPIO.setmode(GPIO.BOARD)
 RIGHT=38          # GPIO 13, pin 33
 LEFT=40           # GPIO 16, pin 36
 REDPIN = 13       # GPIO 27, pin 13
-GREENPIN = 16     # GPIO 23, pin 16
-BLUEPIN = 15      # GPIO 22, pin 15
+GREENPIN = 15     # GPIO 22, pin 15
+BLUEPIN = 16      # GPIO 23, pin 16
 BUZZERPIN = 18    # GPIO 24, pin 18
 #FLAMEPIN = xx    # GPIO 23, pin 16
 OBSTACLEPIN = 22  # GPIO 25, pin 22
@@ -34,33 +34,39 @@ def leftSensor():
 #------------Buzzer Control-------------------------
 #Needs testing, exiting function might stop buzz due to tearing down variable.
 #Easy fix, just add global before buzz
+#buzz = GPIO.PWN(BUZZERPIN, 440)
+
 def buzzOn():
   buzz = GPIO.PWM(BUZZERPIN, 440)
   buzz.start(50)
+  time.sleep(2)
 
 def buzzOff():
-  buzz = GPIO.PWM(BUZZERPIN)  #Need to 
+  buzz = GPIO.PWM(BUZZERPIN)  
   buzz.stop()
   GPIO.output(BUZZERPIN, 0)
   
 #-------------RGB Controls--------------------------
 def redOn():
+  blackOn()
   GPIO.output(REDPIN, GPIO.HIGH)
 
 def redOff():
-  blackOn()
+  GPIO.output(REDPIN, GPIO.LOW)
 
 def greenOn():
+  blackOn()
   GPIO.output(GREENPIN, GPIO.HIGH)
 
 def greenOff():
-  blackOn()
+  GPIO.output(GREENPIN, GPIO.LOW)
 
 def blueOn():
+  blackOn()
   GPIO.output(BLUEPIN, GPIO.HIGH)
 
 def blueOff():
-  blackOn()
+  GPIO.output(BLUEPIN, GPIO.LOW)
 
 def whiteOn():
   GPIO.output(REDPIN, GPIO.HIGH)

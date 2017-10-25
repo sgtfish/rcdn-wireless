@@ -10,20 +10,27 @@
 
 import RobotInverse
 import RobotGPIO
+import RPi.GPIO as GPIO
 import time
 import os
 import glob
 
+GPIO.setmode(GPIO.BOARD)
+
 def detectedObstacle():
-  Obstacle_Detected = False
+  Obstacle_Detected = True
   RobotGPIO.redOn()
   time.sleep(5)
-  RobotGPIO.buzzOn()
+  #RobotGPIO.buzzOn()
+  buzz = GPIO.PWM(18, 440)
+  buzz.start(50)
+ 
   while(Obstacle_Detected == True):
-    #mmm drawing a blank
-    if not RobotGPIO.detectObstacle():
-      # Returns 1 if obsatcle detected
+    if RobotGPIO.detectObstacle():
       Obstacle_Detected = False
+  #BuzzStop
+  buzz.stop()
+
   RobotGPIO.redOff()
   RobotGPIO.greenOn()
 
