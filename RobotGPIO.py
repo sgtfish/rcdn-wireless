@@ -1,16 +1,18 @@
 import RPi.GPIO as GPIO
 import time
+import os
+import glob
 
 GPIO.setmode(GPIO.BOARD)
 
 RIGHT=38          # GPIO 13, pin 33
 LEFT=40           # GPIO 16, pin 36
-REDPIN = 11       # GPIO 17, pin 11
-GREENPIN = 12     # GPIO 18, pin 12
-BLUEPIN = 13      # GPIO 27, pin 13
-BUZZERPIN = 15    # GPIO 22, pin 15
+REDPIN = 13       # GPIO 27, pin 13
+GREENPIN = 16     # GPIO 23, pin 16
+BLUEPIN = 15      # GPIO 22, pin 15
+BUZZERPIN = 18    # GPIO 24, pin 18
 #FLAMEPIN = xx    # GPIO 23, pin 16
-OBSTACLEPIN = 18  # GPIO 24, pin 18
+OBSTACLEPIN = 22  # GPIO 25, pin 22
 #TEMPREAD = 4     # GPIO 4,  ping 7 Assigned in boot/config.txt
 
 GPIO.setup(RIGHT, GPIO.IN)
@@ -46,19 +48,19 @@ def redOn():
   GPIO.output(REDPIN, GPIO.HIGH)
 
 def redOff():
-  GPIO.output(REDPIN, GPIO.LOW)
+  blackOn()
 
 def greenOn():
   GPIO.output(GREENPIN, GPIO.HIGH)
 
 def greenOff():
-  GPIO.output(GREENPIN, GPIO.LOW)
+  blackOn()
 
 def blueOn():
   GPIO.output(BLUEPIN, GPIO.HIGH)
 
 def blueOff():
-  GPIO.output(BLUEPIN, GPIO.LOW)
+  blackOn()
 
 def whiteOn():
   GPIO.output(REDPIN, GPIO.HIGH)

@@ -74,7 +74,7 @@ def calculatePID(ERROR, ERROR_PREVIOUS, I):
   elif I < -255:
     I = -255
   PIDvalue = (Kp*P) + (Ki*I) + (Kd*D)
-  print "P: %s   I: %s   D: %s   PIDvalue: %s" % (P,I,D,PIDvalue)
+  #print "P: %s   I: %s   D: %s   PIDvalue: %s" % (P,I,D,PIDvalue)
   return int(round(PIDvalue,0)), I
 
 def setMotorSpeeds(LSPEED, RSPEED):
@@ -158,12 +158,14 @@ def main():
        #setMotorSpeeds(0,0)
        #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
-
-    #if(RobotGPIO.detectObstacle() == 1):
-       #setMotorSpeeds(0,0)
-       #Module2.detectedObstacle()
-       #setMotorSpeeds(LSPEED, RSPEED)
-
+    #print RobotGPIO.detectObstacle()
+    if(RobotGPIO.detectObstacle() == 0):
+       print "Detected Obstacle = 0"
+       setMotorSpeeds(0,0)
+       Module2.detectedObstacle()
+       print " = 1"
+       setMotorSpeeds(LSPEED, RSPEED)
+    
     ERROR_PREVIOUS = ERROR
 
 if __name__ == '__main__':

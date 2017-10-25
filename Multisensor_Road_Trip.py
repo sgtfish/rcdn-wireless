@@ -24,11 +24,13 @@ def detectedObstacle():
     if not RobotGPIO.detectObstacle():
       # Returns 1 if obsatcle detected
       Obstacle_Detected = False
+  RobotGPIO.redOff()
   RobotGPIO.greenOn()
 
 def detectedHighTemp():
   RobotGPIO.blueOn()
   time.sleep(20)
+  RobotGPIO.blueOff()
   RobotGPIO.greenOn()
 
 
