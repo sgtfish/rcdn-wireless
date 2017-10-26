@@ -163,8 +163,8 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Temp Reading 2? === #
-    #with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
-      #print f.read()[-6:]  # return the last five characters of the array/string
+    with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
+      print f.read()[-6:]  # return the last five characters of the array/string
 
     # === Temp Reading === #
     #if(RobotGPIO.read_temp() >= 32):
