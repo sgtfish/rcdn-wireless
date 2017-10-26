@@ -14,23 +14,19 @@ import RPi.GPIO as GPIO
 import time
 import os
 import glob
+import pdb
 
 GPIO.setmode(GPIO.BOARD)
 
 def detectedObstacle():
-  Obstacle_Detected = True
   RobotGPIO.redOn()
   time.sleep(5)
   #RobotGPIO.buzzOn()
   buzz = GPIO.PWM(18, 440)
   buzz.start(50)
- 
-  while(Obstacle_Detected == True):
-    if RobotGPIO.detectObstacle():
-      Obstacle_Detected = False
-  #BuzzStop
+  while(RobotGPIO.detectObstacle() == 0):
+    Obstacle_Detected = True  # Don't go anywhere if there's still an obstacle in the way after waiting 5 seconds
   buzz.stop()
-
   RobotGPIO.redOff()
   RobotGPIO.greenOn()
 

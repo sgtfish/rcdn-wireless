@@ -171,10 +171,8 @@ def main():
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
-      print "= 0"
       setMotorSpeeds(0,0)
       Module2.detectedObstacle()
-      print "= 1"
       setMotorSpeeds(LSPEED, RSPEED)
 
     ERROR_PREVIOUS = ERROR
