@@ -145,29 +145,38 @@ def main():
   ERROR_PREVIOUS = 0
   I = 0
   RobotGPIO.greenOn()
-
+  
+  LSPEED = INIT_SPEED  # Need to define LSPEED/RSPEED to avoid exception that can occur with Module2 functions
+  RSPEED = INIT_SPEED
+  setMotorSpeeds(INIT_SPEED, INIT_SPEED)  # Tell the robot to move forward once program is started
+  
   while(1):
+    
+    # === PID Tracing === #
     ERROR = errorEval2(sensorRead(), ERROR_PREVIOUS)
     PIDvalue, I = calculatePID(ERROR, ERROR_PREVIOUS, I)
     if PIDvalue != ERROR_PREVIOUS:
       LSPEED = INIT_SPEED - PIDvalue
       RSPEED = INIT_SPEED + PIDvalue
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
-      LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
+      LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)  # Need to run this twice because of some logical issue that can occur by scaling one speed before the other
       setMotorSpeeds(LSPEED, RSPEED)
     
+    # === Temp Reading === #
     #if(RobotGPIO.read_temp() > 32):
        #setMotorSpeeds(0,0)
        #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
     #print RobotGPIO.detectObstacle()
+
+    # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
-       print "= 0"
-       setMotorSpeeds(0,0)
-       Module2.detectedObstacle()
-       print "= 1"
-       setMotorSpeeds(LSPEED, RSPEED)
-    
+      print "= 0"
+      setMotorSpeeds(0,0)
+      Module2.detectedObstacle()
+      print "= 1"
+      setMotorSpeeds(LSPEED, RSPEED)
+
     ERROR_PREVIOUS = ERROR
 
 if __name__ == '__main__':
