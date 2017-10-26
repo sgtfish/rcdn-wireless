@@ -9,7 +9,7 @@ import pdb
 # Trim:
 # Negative value slows down the motor
 LEFT_TRIM   = 0
-RIGHT_TRIM  = -4
+RIGHT_TRIM  = -5
 
 
 # Create an instance of the robot with the specified trim values.
@@ -63,7 +63,7 @@ def errorEval2(variable, ERROR_PREVIOUS):
   return error
     
 def calculatePID(ERROR, ERROR_PREVIOUS, I):
-  Kp = 50
+  Kp = 35
   Ki = .15
   Kd = 60
   P = ERROR
@@ -141,7 +141,7 @@ def scaleSpeed(LSPEED, RSPEED):
   return LSPEED,RSPEED
 
 def main():
-  INIT_SPEED = 150
+  INIT_SPEED = 225
   ERROR_PREVIOUS = 0
   I = 0
   RobotGPIO.greenOn()
@@ -161,13 +161,16 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)  # Need to run this twice because of some logical issue that can occur by scaling one speed before the other
       setMotorSpeeds(LSPEED, RSPEED)
-    
+
+    # === Temp Reading 2? === #
+    #with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
+      #print f.read()[-6:]  # return the last five characters of the array/string
+
     # === Temp Reading === #
-    #if(RobotGPIO.read_temp() > 32):
+    #if(RobotGPIO.read_temp() >= 32):
        #setMotorSpeeds(0,0)
        #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
-    #print RobotGPIO.detectObstacle()
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
