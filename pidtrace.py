@@ -150,6 +150,7 @@ def main():
   RSPEED = INIT_SPEED
   setMotorSpeeds(INIT_SPEED, INIT_SPEED)  # Tell the robot to move forward once program is started
   
+  count = 0
   while(1):
     
     # === PID Tracing === #
@@ -163,14 +164,28 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Temp Reading 2? === #
-    with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
-      print f.read()[-6:]  # return the last five characters of the array/string
+    #with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
+      #print f.read()[-6:]  # return the last five characters of the array/string
 
     # === Temp Reading === #
     #if(RobotGPIO.read_temp() >= 32):
        #setMotorSpeeds(0,0)
        #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
+
+    # === DHT11 Temp read === #
+    #Still slow...counting over 10s
+    #              ~109 with read_DHT11_temp ------Also DHT11 fails frequently see ~/test_sensors/dht11_example.py
+    #              ~750 without any read temp
+    #              ~10 with temp read-2
+    count = count + 1
+    print count
+    
+    #print RobotGPIO.read_DHT11_temp()
+    #if(RobotGPIO.read_DHT11_temp() >= 32):
+      #setMotorSpeeds(0,0)
+      #Module2.detectedHighTemp()
+      #setMotorSpeeds(LSPEED, RSPEED)
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):

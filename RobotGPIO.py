@@ -2,8 +2,10 @@ import RPi.GPIO as GPIO
 import time
 import os
 import glob
+import dht11
 
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 
 RIGHT=38          # GPIO 13, pin 33
 LEFT=40           # GPIO 16, pin 36
@@ -13,7 +15,8 @@ BLUEPIN = 16      # GPIO 23, pin 16
 BUZZERPIN = 18    # GPIO 24, pin 18
 #FLAMEPIN = xx    # GPIO 23, pin 16
 OBSTACLEPIN = 22  # GPIO 25, pin 22
-#TEMPREAD = 4     # GPIO 4,  ping 7 Assigned in boot/config.txt
+#TEMPREAD = 4     # GPIO 4,  pin 7 Assigned in boot/config.txt
+DHT11PIN = 11     # GPIO 17, pin 11
 
 GPIO.setup(RIGHT, GPIO.IN)
 GPIO.setup(LEFT, GPIO.IN)
@@ -82,6 +85,13 @@ def blackOn():
 #def detectFlame():
 #  value = GPIO.input(FLAMEPIN)
 #  return value
+
+#-----------DHT11 temp read-------------------------
+instance = dht11.DHT11(pin=DHT11PIN)
+
+def read_DHT11_temp():
+  result = instance.read()
+  return result.temperature
 
 #-----------Temp Read Control-----------------------
 # Used this for reference
