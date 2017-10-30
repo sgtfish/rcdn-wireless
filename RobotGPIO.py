@@ -13,10 +13,11 @@ REDPIN = 13       # GPIO 27, pin 13
 GREENPIN = 15     # GPIO 22, pin 15
 BLUEPIN = 16      # GPIO 23, pin 16
 BUZZERPIN = 18    # GPIO 24, pin 18
-#FLAMEPIN = xx    # GPIO 23, pin 16
+#FLAMEPIN = xx    # 
 OBSTACLEPIN = 22  # GPIO 25, pin 22
 #TEMPREAD = 4     # GPIO 4,  pin 7 Assigned in boot/config.txt
 DHT11PIN = 11     # GPIO 17, pin 11
+TEMPDIGI = 12     # GPIO 18, pin 12
 
 GPIO.setup(RIGHT, GPIO.IN)
 GPIO.setup(LEFT, GPIO.IN)
@@ -26,6 +27,7 @@ GPIO.setup(BLUEPIN, GPIO.OUT)
 GPIO.setup(BUZZERPIN, GPIO.OUT)
 #GPIO.setup(FLAMEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(OBSTACLEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(TEMPDIGI, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #------------Sensor Controls------------------------
 def rightSensor():
@@ -92,6 +94,11 @@ instance = dht11.DHT11(pin=DHT11PIN)
 def read_DHT11_temp():
   result = instance.read()
   return result.temperature
+
+#-----------Digital Temp Threshold------------------
+def read_temp_threshold():
+  result = GPIO.input(TEMPDIGI)
+  return result
 
 #-----------Temp Read Control-----------------------
 # Used this for reference

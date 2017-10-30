@@ -31,7 +31,7 @@ def detectedObstacle():
   RobotGPIO.greenOn()
 
 def detectedHighTemp():
-  pdb.set_trace()
+  #pdb.set_trace()
   RobotGPIO.blueOn()
   time.sleep(20)
   RobotGPIO.blueOff()

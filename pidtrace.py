@@ -4,7 +4,10 @@ import time
 import RobotInverse
 import RobotGPIO
 import Multisensor_Road_Trip as Module2
+import os
 import pdb
+import TempRead
+import sqlite3
 
 # Trim:
 # Negative value slows down the motor
@@ -80,7 +83,7 @@ def calculatePID(ERROR, ERROR_PREVIOUS, I):
 def setMotorSpeeds(LSPEED, RSPEED):
   #print "LSPEED: %s    RSPEED: %s" % (LSPEED,RSPEED)
   if (LSPEED > 255) or (LSPEED < -255) or (RSPEED > 255) or  (RSPEED < -255):
-    pdb.set_trace()  
+    pdb.set_trace() # Exception Occured  
   if LSPEED >= 0:
     try:
       robot.leftPID(LSPEED)
@@ -141,6 +144,8 @@ def scaleSpeed(LSPEED, RSPEED):
   return LSPEED,RSPEED
 
 def main():
+  conn = sqlite3.connect('temp.db')
+
   INIT_SPEED = 225
   ERROR_PREVIOUS = 0
   I = 0
@@ -151,6 +156,11 @@ def main():
   setMotorSpeeds(INIT_SPEED, INIT_SPEED)  # Tell the robot to move forward once program is started
   
   count = 0
+
+  os.system("sudo ./TempRead.py &")  # insecure, but whatever
+  conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
+  c = conn.cursor()
+
   while(1):
     
     # === PID Tracing === #
@@ -163,6 +173,19 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)  # Need to run this twice because of some logical issue that can occur by scaling one speed before the other
       setMotorSpeeds(LSPEED, RSPEED)
 
+    # === Temp Read 4 (sqlite3) === #
+    #pdb.set_trace()
+    c.execute("SELECT * FROM temps WHERE id = 1")
+    temp = c.fetchone()[0]
+    if (temp >= 32):
+      Module2.detectedHighTemp()
+    #print temp
+
+    # === Temp Read 3 (EnvVar) === #
+    #pdb.set_trace()
+    #TempRead.read_temp()
+    #os.system("sudo ./TempRead.py &")
+    
     # === Temp Reading 2? === #
     #with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
       #print f.read()[-6:]  # return the last five characters of the array/string
@@ -173,13 +196,19 @@ def main():
        #Module2.detectedHighTemp()
        #setMotorSpeeds(LSPEED, RSPEED)
 
+    # === Ditigal Temp Threshold check === #
+    #if(RobotGPIO.read_temp_threshold() == 1):
+      #setMotorSpeeds(0,0)
+      #Module2.detectedHighTemp()
+      #setMotorSpeeds(LSPEED, RSPEED)
+
     # === DHT11 Temp read === #
     #Still slow...counting over 10s
     #              ~109 with read_DHT11_temp ------Also DHT11 fails frequently see ~/test_sensors/dht11_example.py
     #              ~750 without any read temp
     #              ~10 with temp read-2
-    count = count + 1
-    print count
+    #count = count + 1
+    #print count
     
     #print RobotGPIO.read_DHT11_temp()
     #if(RobotGPIO.read_DHT11_temp() >= 32):
