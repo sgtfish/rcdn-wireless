@@ -23,11 +23,14 @@ RIGHT_TRIM  = -5
 robot = RobotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
 
 
+
 # Return the concatonated values of the sensor inputs (number of possible states == 2^(number_of_sensors)-1)
 def sensorRead():
   L = RobotGPIO.leftSensor()
   R = RobotGPIO.rightSensor()
   return str(L)+str(R)
+
+
 
 # Return the positive or negative error value, dependent upon the current state of the sensors
 # Positive value == Turn Left
@@ -47,7 +50,8 @@ def errorEval(variable, ERROR_PREVIOUS):
   return error
 
 
-# "Nonlinear: interpretation of error
+
+# "Nonlinear": interpretation of error
 # Positive value == Turn Left
 # Negative value == Turn Right
 def errorEval2(variable, ERROR_PREVIOUS):
@@ -65,10 +69,12 @@ def errorEval2(variable, ERROR_PREVIOUS):
       error = 4.5
   return error
     
+
+
 def calculatePID(ERROR, ERROR_PREVIOUS, I):
   Kp = 35
   Ki = .15
-  Kd = 60
+  Kd = 80
   P = ERROR
   I =  I + ERROR
   D = ERROR - ERROR_PREVIOUS
@@ -79,6 +85,8 @@ def calculatePID(ERROR, ERROR_PREVIOUS, I):
   PIDvalue = (Kp*P) + (Ki*I) + (Kd*D)
   #print "P: %s   I: %s   D: %s   PIDvalue: %s" % (P,I,D,PIDvalue)
   return int(round(PIDvalue,0)), I
+
+
 
 def setMotorSpeeds(LSPEED, RSPEED):
   #print "LSPEED: %s    RSPEED: %s" % (LSPEED,RSPEED)
@@ -143,8 +151,9 @@ def scaleSpeed(LSPEED, RSPEED):
       RSPEED = -255
   return LSPEED,RSPEED
 
+
+
 def main():
-  conn = sqlite3.connect('temp.db')
 
   INIT_SPEED = 225
   ERROR_PREVIOUS = 0
@@ -157,7 +166,7 @@ def main():
   
   count = 0
 
-  os.system("sudo ./TempRead.py &")  # insecure, but whatever
+  os.system("sudo ./TempRead.py &")  # Automatically run TempRead program in the background. Does not get kill'd with pidtrace.py. Also insecure, but whatever
   conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
   c = conn.cursor()
 
@@ -174,27 +183,10 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Temp Read 4 (sqlite3) === #
-    #pdb.set_trace()
     c.execute("SELECT * FROM temps WHERE id = 1")
     temp = c.fetchone()[0]
     if (temp >= 32):
       Module2.detectedHighTemp()
-    #print temp
-
-    # === Temp Read 3 (EnvVar) === #
-    #pdb.set_trace()
-    #TempRead.read_temp()
-    #os.system("sudo ./TempRead.py &")
-    
-    # === Temp Reading 2? === #
-    #with open('/sys/bus/w1/devices/28-021624e890ee/w1_slave','r') as f:
-      #print f.read()[-6:]  # return the last five characters of the array/string
-
-    # === Temp Reading === #
-    #if(RobotGPIO.read_temp() >= 32):
-       #setMotorSpeeds(0,0)
-       #Module2.detectedHighTemp()
-       #setMotorSpeeds(LSPEED, RSPEED)
 
     # === Ditigal Temp Threshold check === #
     #if(RobotGPIO.read_temp_threshold() == 1):
@@ -222,7 +214,7 @@ def main():
       Module2.detectedObstacle()
       setMotorSpeeds(LSPEED, RSPEED)
 
-    ERROR_PREVIOUS = ERROR
+    ERROR_PREVIOUS = ERROR  # part of PID Tracing
 
 if __name__ == '__main__':
 
