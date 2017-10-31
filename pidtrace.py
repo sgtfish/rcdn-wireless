@@ -188,26 +188,6 @@ def main():
     if (temp >= 32):
       Module2.detectedHighTemp()
 
-    # === Ditigal Temp Threshold check === #
-    #if(RobotGPIO.read_temp_threshold() == 1):
-      #setMotorSpeeds(0,0)
-      #Module2.detectedHighTemp()
-      #setMotorSpeeds(LSPEED, RSPEED)
-
-    # === DHT11 Temp read === #
-    #Still slow...counting over 10s
-    #              ~109 with read_DHT11_temp ------Also DHT11 fails frequently see ~/test_sensors/dht11_example.py
-    #              ~750 without any read temp
-    #              ~10 with temp read-2
-    #count = count + 1
-    #print count
-    
-    #print RobotGPIO.read_DHT11_temp()
-    #if(RobotGPIO.read_DHT11_temp() >= 32):
-      #setMotorSpeeds(0,0)
-      #Module2.detectedHighTemp()
-      #setMotorSpeeds(LSPEED, RSPEED)
-
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
       setMotorSpeeds(0,0)
