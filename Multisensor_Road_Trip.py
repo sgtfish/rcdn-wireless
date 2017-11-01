@@ -37,4 +37,30 @@ def detectedHighTemp():
   RobotGPIO.blueOff()
   RobotGPIO.greenOn()
 
+def detectedFlame():
+  RobotGPIO.whiteOn()
+  buzzTone = 300
+  buzz = GPIO.PWN(18, 300)
+  buzz.start(50)
+  while(RobotGPIO.detectFlame() == 1):
+    time.sleep(.2)
+    if buzzTone < 500:
+      buzzTone = buzzTone + 10
+    buzz = GPIO.PWN(18,buzzTone)
+  buzz.stop()
+  RobotGPIO.blackOn()
+  RobotGPIO.greenOn()
 
+def detectedTilt():
+  tilted = True
+  while(tilted):
+    RobotGPIO.blueOn()
+    time.sleep(.2)
+    RobotGPIO.greenOn()
+    time.sleep(.2)
+    RobotGPIO.redOn()
+    time.sleep(.2)
+    if(RobotGPIO.detectTilt() == 0):
+      tilted = False
+  RobotGPIO.blackOn()
+  RobotGPIO.greenOn()

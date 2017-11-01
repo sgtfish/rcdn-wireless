@@ -12,7 +12,7 @@ import sqlite3
 # Trim:
 # Negative value slows down the motor
 LEFT_TRIM   = 0
-RIGHT_TRIM  = -5
+RIGHT_TRIM  = -4
 
 
 # Create an instance of the robot with the specified trim values.
@@ -193,6 +193,18 @@ def main():
       setMotorSpeeds(0,0)
       Module2.detectedObstacle()
       setMotorSpeeds(LSPEED, RSPEED)
+
+    # === Fame detection === #
+    if(RobotGPIO.detectFlame() == 1):
+      setMotorSpeeds(0,0)
+      Module2.detectedFlame()
+      setMotorSpeeds(LSPEED,RSPEED)
+
+    # === Tilt detection === #
+    #if(RobotGPIO.detectTilt() == 1):
+      #setMotorSpeeds(0,0)
+      #Module2.detectedTilt()
+      #setMotorSpeeds(LSPEED, RSPEED)
 
     ERROR_PREVIOUS = ERROR  # part of PID Tracing
 

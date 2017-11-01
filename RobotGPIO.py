@@ -4,6 +4,10 @@ import os
 import glob
 import dht11
 
+from ctypes import string_at
+from sys import getsizeof
+from binascii import hexlify
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
@@ -13,11 +17,12 @@ REDPIN = 13       # GPIO 27, pin 13
 GREENPIN = 15     # GPIO 22, pin 15
 BLUEPIN = 16      # GPIO 23, pin 16
 BUZZERPIN = 18    # GPIO 24, pin 18
-#FLAMEPIN = xx    # 
+FLAMEPIN = 31     # GPIO 6,  pin 31
 OBSTACLEPIN = 22  # GPIO 25, pin 22
 #TEMPREAD = 4     # GPIO 4,  pin 7 Assigned in boot/config.txt
 DHT11PIN = 11     # GPIO 17, pin 11
 TEMPDIGI = 12     # GPIO 18, pin 12
+TILTPIN = 32      # GPIO 12, pin 32
 
 GPIO.setup(RIGHT, GPIO.IN)
 GPIO.setup(LEFT, GPIO.IN)
@@ -25,9 +30,10 @@ GPIO.setup(REDPIN, GPIO.OUT)
 GPIO.setup(GREENPIN, GPIO.OUT)
 GPIO.setup(BLUEPIN, GPIO.OUT)
 GPIO.setup(BUZZERPIN, GPIO.OUT)
-#GPIO.setup(FLAMEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(FLAMEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(OBSTACLEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(TEMPDIGI, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(TILTPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #------------Sensor Controls------------------------
 def rightSensor():
@@ -83,10 +89,17 @@ def blackOn():
   GPIO.output(GREENPIN, GPIO.LOW)
   GPIO.output(BLUEPIN, GPIO.LOW)
 
-#-----------Flame Detector Controls-----------------
-#def detectFlame():
-#  value = GPIO.input(FLAMEPIN)
-#  return value
+#-----------Flame Detector Control------------------
+def detectFlame():
+  value = GPIO.input(FLAMEPIN)
+  return value
+
+#-----------Tilt Detector Control-------------------
+
+#def detected(ev=None):
+  #print "Tilt detected"
+
+#GPIO.add_event_detect(TILTPIN, GPIO.FALLING, callback=detected)
 
 #-----------DHT11 temp read-------------------------
 instance = dht11.DHT11(pin=DHT11PIN)
