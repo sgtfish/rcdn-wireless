@@ -33,7 +33,7 @@ def detectedObstacle():
 def detectedHighTemp():
   #pdb.set_trace()
   RobotGPIO.blueOn()
-  time.sleep(20)
+  time.sleep(5)
   RobotGPIO.blueOff()
   RobotGPIO.greenOn()
 
@@ -60,6 +60,7 @@ def detectedTilt():
     time.sleep(.2)
     RobotGPIO.redOn()
     time.sleep(.2)
+    print RobotGPIO.detectTilt()
     if(RobotGPIO.detectTilt() == 0):
       tilted = False
   RobotGPIO.blackOn()

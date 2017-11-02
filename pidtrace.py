@@ -14,6 +14,7 @@ import sqlite3
 LEFT_TRIM   = 0
 RIGHT_TRIM  = -4
 
+tiltedRobot = False
 
 # Create an instance of the robot with the specified trim values.
 # Not shown are other optional parameters:
@@ -155,7 +156,7 @@ def scaleSpeed(LSPEED, RSPEED):
 
 def main():
 
-  INIT_SPEED = 225
+  INIT_SPEED = 200
   ERROR_PREVIOUS = 0
   I = 0
   RobotGPIO.greenOn()
@@ -186,7 +187,9 @@ def main():
     c.execute("SELECT * FROM temps WHERE id = 1")
     temp = c.fetchone()[0]
     if (temp >= 32):
+      setMotorSpeeds(0,0)
       Module2.detectedHighTemp()
+      setMotorSpeeds(LSPEED, RSPEED)
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
@@ -195,13 +198,16 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Fame detection === #
-    if(RobotGPIO.detectFlame() == 1):
-      setMotorSpeeds(0,0)
-      Module2.detectedFlame()
-      setMotorSpeeds(LSPEED,RSPEED)
+    #if(RobotGPIO.detectFlame() == 1):
+      #setMotorSpeeds(0,0)
+      #Module2.detectedFlame()
+      #setMotorSpeeds(LSPEED,RSPEED)
 
     # === Tilt detection === #
-    #if(RobotGPIO.detectTilt() == 1):
+    #print RobotGPIO.detectTilt()
+    #robotTilted = RobotGPIO.detectTilt()
+    #print robotTilted
+    #if(robotTilted):
       #setMotorSpeeds(0,0)
       #Module2.detectedTilt()
       #setMotorSpeeds(LSPEED, RSPEED)
