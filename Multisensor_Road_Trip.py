@@ -41,12 +41,10 @@ def detectedFlame():
   RobotGPIO.whiteOn()
   buzzTone = 300
   up = True
-  pdb.set_trace()
   buzz = GPIO.PWM(18, 300)
   buzz.start(50)
   while(RobotGPIO.detectFlame() == 1):
     time.sleep(.05)
-    print buzzTone
     if buzzTone == 500:
       up = False
     if buzzTone == 300:
@@ -56,9 +54,7 @@ def detectedFlame():
     if buzzTone > 300 and not up:
       buzzTone = buzzTone - 10
     buzz.ChangeFrequency(buzzTone)
-    #buzz.start(50)
   buzz.stop()
-  #print "Buzz Stop"
   RobotGPIO.blackOn()
   RobotGPIO.greenOn()
 
