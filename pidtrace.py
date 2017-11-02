@@ -202,10 +202,10 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Fame detection === #
-    #if(RobotGPIO.detectFlame() == 1):
-      #setMotorSpeeds(0,0)
-      #Module2.detectedFlame()
-      #setMotorSpeeds(LSPEED,RSPEED)
+    if(RobotGPIO.detectFlame() == 1):
+      setMotorSpeeds(0,0)
+      Module2.detectedFlame()
+      setMotorSpeeds(LSPEED,RSPEED)
 
     # === Tilt detection === #
     #print RobotGPIO.detectTilt()
