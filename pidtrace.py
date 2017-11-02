@@ -166,6 +166,7 @@ def main():
   setMotorSpeeds(INIT_SPEED, INIT_SPEED)  # Tell the robot to move forward once program is started
   
   count = 0
+  tempFlag = False
 
   os.system("sudo ./TempRead.py &")  # Automatically run TempRead program in the background. Does not get kill'd with pidtrace.py. Also insecure, but whatever
   conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
@@ -186,10 +187,13 @@ def main():
     # === Temp Read 4 (sqlite3) === #
     c.execute("SELECT * FROM temps WHERE id = 1")
     temp = c.fetchone()[0]
-    if (temp >= 32):
+    if (temp >= 32 and !tempFlag):
+      tempFlag = True
       setMotorSpeeds(0,0)
       Module2.detectedHighTemp()
       setMotorSpeeds(LSPEED, RSPEED)
+    if (temp < 32 and tempFlag):
+      tempFlag = False
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
