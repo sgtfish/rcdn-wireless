@@ -65,9 +65,9 @@ def errorEval2(variable, ERROR_PREVIOUS):
     error = 1
   elif variable == '00':
     if ERROR_PREVIOUS < 0:
-      error = -4.5
+      error = -6
     else:
-      error = 4.5
+      error = 6
   return error
     
 
@@ -187,7 +187,7 @@ def main():
     # === Temp Read 4 (sqlite3) === #
     c.execute("SELECT * FROM temps WHERE id = 1")
     temp = c.fetchone()[0]
-    if (temp >= 32 and !tempFlag):
+    if (temp >= 32 and not tempFlag):
       tempFlag = True
       setMotorSpeeds(0,0)
       Module2.detectedHighTemp()
