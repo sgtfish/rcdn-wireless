@@ -66,16 +66,16 @@ def errorEval2(variable, ERROR_PREVIOUS):
     error = 1
   elif variable == '00':
     if ERROR_PREVIOUS < 0:
-      error = -6
+      error = -5.5
     else:
-      error = 6
+      error = 5.5
   return error
     
 
 
 def calculatePID(ERROR, ERROR_PREVIOUS, I):
   Kp = 35
-  Ki = .15
+  Ki = .1
   Kd = 80
   P = ERROR
   I =  I + ERROR
@@ -157,7 +157,7 @@ def scaleSpeed(LSPEED, RSPEED):
 
 def main():
 
-  INIT_SPEED = 225
+  INIT_SPEED = 200
   ERROR_PREVIOUS = 0
   I = 0
   RobotGPIO.greenOn()
