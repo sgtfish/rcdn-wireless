@@ -101,6 +101,10 @@ def detectFlame():
 
 #GPIO.add_event_detect(TILTPIN, GPIO.FALLING, callback=detected)
 
+def detectTilt():
+  result = GPIO.input(TILTPIN)
+  return result
+
 #-----------DHT11 temp read-------------------------
 instance = dht11.DHT11(pin=DHT11PIN)
 
