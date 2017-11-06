@@ -173,7 +173,7 @@ def main():
   conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
   c = conn.cursor()
 
-  #pumpkin._spin_left(50)
+  pumpkin._spin_right(75)
 
   while(1):
     
@@ -186,7 +186,6 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)  # Need to run this twice because of some logical issue that can occur by scaling one speed before the other
       setMotorSpeeds(LSPEED, RSPEED)
-      pumpkin._spin(LSPEED/3, RSPEED/3)
 
     # === Temp Read 4 (sqlite3) === #
     c.execute("SELECT * FROM temps WHERE id = 1")
@@ -205,13 +204,13 @@ def main():
       Module2.detectedObstacle()
       setMotorSpeeds(LSPEED, RSPEED)
 
-    # === Fame detection === #
+    # === Flame Detection === #
     if(RobotGPIO.detectFlame() == 1):
       setMotorSpeeds(0,0)
       Module2.detectedFlame()
       setMotorSpeeds(LSPEED,RSPEED)
 
-    # === Tilt detection === #
+    # === Tilt Detection === #
     #print RobotGPIO.detectTilt()
     #robotTilted = RobotGPIO.detectTilt()
     #print robotTilted

@@ -18,7 +18,7 @@ class Robot(object):
         self._pumpkin_speed(speed)
         self._pumpkin.run(Adafruit_MotorHAT.BACKWARD)
 
-    def _spin_right(self, speed):
+    def _spin_right(self, speed, seconds=None):
         self._pumpkin_speed(speed)
         self._pumpkin.run(Adafruit_MotorHAT.FORWARD)
 

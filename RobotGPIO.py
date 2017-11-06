@@ -2,7 +2,6 @@ import RPi.GPIO as GPIO
 import time
 import os
 import glob
-import dht11
 
 from ctypes import string_at
 from sys import getsizeof
@@ -105,17 +104,6 @@ def detectTilt():
   result = GPIO.input(TILTPIN)
   return result
 
-#-----------DHT11 temp read-------------------------
-instance = dht11.DHT11(pin=DHT11PIN)
-
-def read_DHT11_temp():
-  result = instance.read()
-  return result.temperature
-
-#-----------Digital Temp Threshold------------------
-def read_temp_threshold():
-  result = GPIO.input(TEMPDIGI)
-  return result
 
 #-----------Temp Read Control-----------------------
 # Used this for reference
