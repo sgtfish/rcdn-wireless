@@ -1,12 +1,20 @@
 from Adafruit_MotorHAT import Adafruit_MotorHAT
+import atexit
 
 class Robot(object):
-    def __init__(self, addr=0x60, pumpkin_id=4, pumpkin_trim=0):
+    def __init__(self, addr=0x60, pumpkin_id=4, pumpkin_trim=0, stop_at_exit=True):
         # Initialize motor HAT and left, right motor.
         self._mh = Adafruit_MotorHAT(addr)
         self._pumpkin = self._mh.getMotor(pumpkin_id)
 
         # Start with motors turned off.
+        self._pumpkin.run(Adafruit_MotorHAT.RELEASE)
+
+        if stop_at_exit:
+            atexit.register(self.stop)
+
+    def stop(self):
+        """Stop all movement."""
         self._pumpkin.run(Adafruit_MotorHAT.RELEASE)
 
     def _pumpkin_speed(self, speed):
