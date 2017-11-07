@@ -12,8 +12,8 @@ import SpinningPumpkin
 
 # Trim:
 # Negative value slows down the motor
-LEFT_TRIM   = 0
-RIGHT_TRIM  = -4
+LEFT_TRIM   = -1
+RIGHT_TRIM  = -5
 
 tiltedRobot = False
 
@@ -66,17 +66,17 @@ def errorEval2(variable, ERROR_PREVIOUS):
     error = 1
   elif variable == '00':
     if ERROR_PREVIOUS < 0:
-      error = -5.5
+      error = -4.5
     else:
-      error = 5.5
+      error = 4.5
   return error
     
 
 
 def calculatePID(ERROR, ERROR_PREVIOUS, I):
   Kp = 35
-  Ki = .1
-  Kd = 80
+  Ki = .15
+  Kd = 85
   P = ERROR
   I =  I + ERROR
   D = ERROR - ERROR_PREVIOUS
@@ -157,7 +157,7 @@ def scaleSpeed(LSPEED, RSPEED):
 
 def main():
 
-  INIT_SPEED = 200
+  INIT_SPEED = 175
   ERROR_PREVIOUS = 0
   I = 0
   RobotGPIO.greenOn()
