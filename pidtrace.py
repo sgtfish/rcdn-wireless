@@ -170,15 +170,21 @@ def main():
   tempFlag = False
 
   os.system("sudo ./TempRead.py &")  # Automatically run TempRead program in the background. Does not get kill'd with pidtrace.py. Also insecure, but whatever
+  os.system("sudo ./LineRead.py &")
+
   conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
-  c = conn.cursor()
+  c_temp = conn.cursor()
+  conn = sqlite3.connect("line.db")  # initialize DB interaction for LineRead'ing
+  c_line = conn.cursor()
 
-  pumpkin._spin_right(75)
-
+  #pumpkin._spin_right(75)
+  pdb.set_trace()
   while(1):
     
     # === PID Tracing === #
-    ERROR = errorEval2(sensorRead(), ERROR_PREVIOUS)
+    c_line.execute("SELECT * from line WHERE id = 1")
+    ERRORS = c_line.fetchone()
+    ERROR, ERROR_PREVIOUS = ERRORS[0], ERRORS[1] 
     PIDvalue, I = calculatePID(ERROR, ERROR_PREVIOUS, I)
     if PIDvalue != ERROR_PREVIOUS:
       LSPEED = INIT_SPEED - PIDvalue
@@ -188,8 +194,8 @@ def main():
       setMotorSpeeds(LSPEED, RSPEED)
 
     # === Temp Read 4 (sqlite3) === #
-    c.execute("SELECT * FROM temps WHERE id = 1")
-    temp = c.fetchone()[0]
+    c_temp.execute("SELECT * FROM temps WHERE id = 1")
+    temp = c_temp.fetchone()[0]
     if (temp >= 32 and not tempFlag):
       tempFlag = True
       setMotorSpeeds(0,0)
