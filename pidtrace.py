@@ -57,6 +57,7 @@ def errorEval(variable, ERROR_PREVIOUS):
 # Positive value == Turn Left
 # Negative value == Turn Right
 def errorEval2(variable, ERROR_PREVIOUS):
+  #pdb.set_trace()
   array = ['10','11','01']
   if variable == '10':
     error = -1
@@ -64,7 +65,7 @@ def errorEval2(variable, ERROR_PREVIOUS):
     error = 0
   elif variable == '01':
     error = 1
-  elif variable == '00':
+  elif variable == '0':
     if ERROR_PREVIOUS < 0:
       error = -4.5
     else:
@@ -178,13 +179,15 @@ def main():
   c_line = conn.cursor()
 
   #pumpkin._spin_right(75)
-  pdb.set_trace()
+  #pdb.set_trace()
   while(1):
     
     # === PID Tracing === #
     c_line.execute("SELECT * from line WHERE id = 1")
     ERRORS = c_line.fetchone()
-    ERROR, ERROR_PREVIOUS = ERRORS[0], ERRORS[1] 
+    #pdb.set_trace()
+    ERROR, ERROR_PREVIOUS = errorEval2(str(ERRORS[0]), ERROR_PREVIOUS), errorEval2(str(ERRORS[1]), ERROR_PREVIOUS)
+    
     PIDvalue, I = calculatePID(ERROR, ERROR_PREVIOUS, I)
     if PIDvalue != ERROR_PREVIOUS:
       LSPEED = INIT_SPEED - PIDvalue
