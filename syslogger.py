@@ -3,9 +3,10 @@ from logging.handlers import SysLogHandler
 
 class SysLogger:
     
-    # This class is used to log to a file for now for testing. Later on a syslog handler should be added (the file handler can still be used for logging locally as well).
+    # This class is used to log to a file for now for testing
+    # Later on a syslog handler should be added
     
-    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s' # default log format (improvement to be made: prettier formatting)
+    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s' # default log format 
     log_level = 'INFO' # Default log level
     log_filename = 'logs.txt' # Log file for testing
    
@@ -15,7 +16,7 @@ class SysLogger:
             facility: the facility name
             
         Optional params:
-            format: log format to be used (the following document can be referenced for this: https://docs.python.org/3/library/logging.html#logrecord-attributes)
+            format: log format to be used (https://docs.python.org/3/library/logging.html#logrecord-attributes)
             level: if desired, the log level can be specified (DEBUG, INFO, WARNING, ERROR, CRITICAL, NOTSET)
             filename: different file for logging
         """
