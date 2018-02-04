@@ -41,7 +41,7 @@ def ftp(ip, filepath, userid, password, filename):
     syslogger.log("Downloader","ERROR","Failed to connect or download file")
 
 def html(ip, filepath, userid, password, filename):
-  syslogger.log("Downloader","INFO","Connecting to HTML server")
+  syslogger.log("Downloader","INFO","Connecting to HTML server") # HTTP server?
   try:
     url = "http://" + ip + filepath + filename
     syslogger.log("Downloader","INFO","Downloading file")
@@ -51,6 +51,6 @@ def html(ip, filepath, userid, password, filename):
     f.write(response) 
     syslogger.log("Downloader","INFO","Successfully downloaded file")
     f.close 
-    syslogger.log("Downloader","INFO","Closed HTML connection")
+    syslogger.log("Downloader","INFO","Closed HTML connection") # HTTP connection?
   except:
     syslogger.log("Downloader","ERROR","Failed to connect or download file")
