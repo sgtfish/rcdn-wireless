@@ -1,6 +1,6 @@
 import json
 import syslogger
-import moveRobot
+import robotCommand
 
 def parseFile(fileName):
   syslogger.log("Parser","INFO","Opening file")
@@ -24,7 +24,7 @@ def parseFile(fileName):
         duration = cmds[i]['duration']
 
         syslogger.log("Parser","INFO","Sending action " + action + " for " + str(duration) + " seconds.")
-        moveRobot.command(action,duration)
+        robotCommand.command(action,duration)
     except:
       syslogger.log("Parser","ERROR","Failed to parse file") 
       sys.exit(1)
