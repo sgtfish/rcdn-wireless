@@ -10,9 +10,9 @@ def parseFile(fileName):
           syslogger.log("Parser","INFO","Begin parsing " + fileName) 
           cmds = json.load(json_file)
           cmd_count = len(cmds)
-      except:
-        syslogger.log("Parser","ERROR","Could not find JSON objects")
-        sys.exit(1)
+        except:
+          syslogger.log("Parser","ERROR","Could not find JSON objects")
+          sys.exit(1)
     except:
       syslogger.log("Parser","ERROR","File not found in flash!")
       sys.exit(1)
