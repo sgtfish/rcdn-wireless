@@ -11,7 +11,7 @@ import pdb
 LEFT_TRIM   = -1
 RIGHT_TRIM = -5
 
-robot = RobotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
+robot = robotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
 SPEED = 100
 
 def command(action, duration):
