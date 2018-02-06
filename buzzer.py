@@ -6,7 +6,7 @@ def buzz(duration):
   time.sleep(duration)
   robotGPIO.buzzOff()
  
-def beep(duration)
+def beep(duration):
   INTERVAL = 0.25
   while duration > 0:
     buzzOn()

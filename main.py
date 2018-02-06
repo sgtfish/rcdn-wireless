@@ -3,26 +3,29 @@
 import time
 import robotInverse
 import robotGPIO
-import Multisensor_Road_Trip as Module2
 import os
 import pdb
-import SpinningPumpkin
-
-# Trim:
-# Negative value slows down the motor
-LEFT_TRIM   = -1
-RIGHT_TRIM = -5
-
-# Create an instance of the robot with the specified trim values.
-# Not shown are other optional parameters:
-#  - addr: The I2C address of the motor HAT, default is 0x60.
-#  - left_id: The ID of the left motor, default is 1.
-#  - right_id: The ID of the right motor, default is 2.
-robot = RobotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
+import download
+import parse
 
 
 def main():
+  downloadMethod = "SSH"
+  ip = "192.168.1.20"
+  directory = "FTP/"
+  username = "pi"
+  password = "raspberry"
+  fileName = "test.json"
   
+  if(downloadMethod == "ssh"):
+    download.ssh(ip,directory,username,password,fileName)
+  elif(downloadMethod == "telnet"):
+    download.telnet(ip,directory,username,password,fileName)
+  elif(downloadMethod == "html"):
+    download.html(ip,directory,username,password,fileName)
+  else:
+    "failed"
+
 
 if __name__ == '__main__':
   main()

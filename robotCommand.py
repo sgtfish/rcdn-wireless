@@ -43,7 +43,7 @@ def command(action, duration):
     syslogger.log("robotCommand.py", "INFO", "Green LED " +duration+ " seconds.")
     led.green(duration)
     
-  eliif action == "led_red":
+  elif action == "led_red":
     syslogger.log("robotCommand.py", "INFO", "Red LED for " +duration+ " seconds.")
     led.red(duration)
     

@@ -1,4 +1,4 @@
-import paramiko, os, urllib, 
+import paramiko, os, urllib
 import syslogger
 from ftplib import FTP
 
