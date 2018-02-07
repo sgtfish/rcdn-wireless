@@ -1,0 +1,684 @@
+2018-02-07 15:57:29,882 - [download.py] - INFO - Starting SSH connection
+2018-02-07 15:57:31,187 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 15:57:31,188 - [download.py] - INFO - Attempting to download file
+2018-02-07 15:57:31,573 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 15:57:31,640 - [download.py] - INFO - Closed SSH connection
+2018-02-07 15:57:31,642 - [parse.py] - INFO - Opening file
+2018-02-07 15:57:31,643 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 15:57:31,645 - [parse.py] - INFO - Compiling commands
+2018-02-07 15:57:31,646 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 15:57:31,648 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 15:57:34,675 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 15:57:34,687 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 15:57:38,716 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 15:57:38,717 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 15:57:42,742 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 15:57:42,744 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 15:57:47,769 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 15:57:47,770 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 15:57:49,797 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 15:57:49,798 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 15:57:54,828 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 15:57:54,829 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 15:57:57,857 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 15:57:57,858 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 15:58:02,884 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 15:58:02,885 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 15:58:03,888 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 15:58:03,889 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 15:58:04,892 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 15:58:04,893 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 15:58:05,896 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 15:58:05,897 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 15:58:06,900 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 15:58:06,901 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 15:58:11,908 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:01:05,472 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:01:06,778 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:01:06,779 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:01:07,129 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:01:07,195 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:01:07,197 - [parse.py] - INFO - Opening file
+2018-02-07 16:01:07,198 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:01:07,199 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:01:07,200 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:01:07,201 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:01:10,229 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:01:10,230 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:01:14,258 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:01:14,260 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:01:18,288 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:01:18,290 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:01:23,319 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:01:23,320 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:01:25,347 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:01:25,348 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:01:30,378 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:01:30,379 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:01:33,407 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:01:33,408 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:01:38,433 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:01:38,435 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:01:39,437 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:01:39,439 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:01:40,441 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:01:40,442 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:01:41,445 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:01:41,446 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:01:42,449 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:01:49,288 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:04:03,789 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:04:06,370 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:04:07,711 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:04:07,712 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:04:08,020 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:04:08,087 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:04:08,088 - [parse.py] - INFO - Opening file
+2018-02-07 16:04:08,090 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:04:08,092 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:04:08,093 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:04:08,095 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:04:11,122 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:04:11,124 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:04:15,149 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:04:15,150 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:04:19,179 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:04:19,181 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:04:24,210 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:04:24,217 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:04:26,244 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:04:26,246 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:04:31,276 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:04:31,277 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:04:34,305 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:04:34,306 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:04:39,332 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:04:39,333 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:04:40,336 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:04:40,337 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:04:41,340 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:04:41,342 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:04:42,344 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:04:42,346 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:04:43,348 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:05:26,406 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:05:31,413 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:08:00,732 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:08:02,120 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:08:02,122 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:08:02,519 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:08:02,585 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:08:02,587 - [parse.py] - INFO - Opening file
+2018-02-07 16:08:02,588 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:08:02,590 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:08:02,591 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:08:02,593 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:08:05,620 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:08:05,621 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:08:09,650 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:08:09,651 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:08:13,680 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:08:13,681 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:08:18,711 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:08:18,712 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:08:20,739 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:08:20,740 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:08:25,770 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:08:25,772 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:08:28,799 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:08:28,801 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:08:33,826 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:08:33,828 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:08:34,830 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:08:34,832 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:08:35,834 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:08:35,836 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:08:36,838 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:08:36,840 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:08:37,842 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:08:41,534 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:09:03,797 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:09:30,731 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:09:32,022 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:09:32,023 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:09:32,517 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:09:32,584 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:09:32,585 - [parse.py] - INFO - Opening file
+2018-02-07 16:09:32,587 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:09:32,588 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:09:32,590 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:09:32,591 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:09:35,618 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:09:35,620 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:09:39,649 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:09:39,650 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:09:43,679 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:09:43,680 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:09:48,710 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:09:48,711 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:09:50,736 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:09:50,738 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:09:55,768 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:09:55,769 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:09:58,797 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:09:58,799 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:10:03,824 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:10:03,826 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:10:04,828 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:10:04,830 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:10:05,832 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:10:05,834 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:10:06,836 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:10:06,838 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:10:07,840 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:10:24,063 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:10:47,614 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:11:43,021 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:11:44,346 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:11:44,347 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:11:44,672 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:11:44,739 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:11:44,740 - [parse.py] - INFO - Opening file
+2018-02-07 16:11:44,742 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:11:44,744 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:11:44,745 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:11:44,746 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:11:47,774 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:11:47,775 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:11:51,804 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:11:51,805 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:11:55,834 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:11:55,835 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:12:00,865 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:12:00,867 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:12:02,897 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:12:02,899 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:12:07,929 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:12:07,930 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:12:10,958 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:12:10,960 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:12:15,986 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:12:15,987 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:12:16,990 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:12:16,991 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:12:17,994 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:12:17,995 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:12:18,998 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:12:18,999 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:12:20,002 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:12:26,242 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:12:45,992 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:12:45,994 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:12:53,025 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:12:53,033 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:12:58,063 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:12:58,068 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:13:03,093 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:13:03,095 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:13:06,101 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:13:06,102 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:13:10,129 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:13:10,130 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:13:10,132 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:14:50,176 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:14:51,533 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:14:51,534 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:14:51,844 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:14:51,911 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:14:51,912 - [parse.py] - INFO - Opening file
+2018-02-07 16:14:51,913 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:14:51,915 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:14:51,916 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:14:51,917 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:14:54,944 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:14:54,945 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:14:58,974 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:14:58,975 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:15:03,004 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:15:03,005 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:15:08,035 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:15:08,037 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:15:10,066 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:15:10,067 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:15:15,093 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:15:15,094 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:15:18,122 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:15:18,123 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:15:23,149 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:15:23,150 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:15:24,153 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:15:24,154 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:15:25,157 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:15:25,158 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:15:26,161 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:15:26,162 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:15:27,165 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:15:27,166 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:15:32,173 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:15:32,175 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:15:39,206 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:15:39,208 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:15:44,238 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:15:44,248 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:15:49,278 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:15:49,283 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:15:52,287 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:15:52,289 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:15:56,318 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:16:01,781 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:16:25,253 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:16:53,142 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:16:54,630 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:16:54,631 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:16:55,043 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:16:55,160 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:16:55,161 - [parse.py] - INFO - Opening file
+2018-02-07 16:16:55,163 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:16:55,164 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:16:55,166 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:16:55,167 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:16:58,192 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:16:58,194 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:17:02,223 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:17:02,224 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:17:06,249 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:17:06,251 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:17:11,276 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:17:11,277 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:17:13,303 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:17:13,304 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:17:18,329 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:17:18,330 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:17:21,355 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:17:21,356 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:17:26,377 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:17:26,378 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:17:27,380 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:17:27,381 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:17:28,383 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:17:28,384 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:17:29,385 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:17:29,386 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:17:30,388 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:17:30,389 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:17:35,391 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:17:35,392 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:17:42,417 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:17:42,419 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:17:47,449 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:17:47,450 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:17:52,476 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:17:52,477 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:17:55,479 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:17:55,480 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:17:59,506 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:18:51,171 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:19:13,673 - [parse.py] - ERROR - Failed to parse file
+2018-02-07 16:19:32,571 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:19:33,994 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:19:33,995 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:19:34,295 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:19:34,411 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:19:34,413 - [parse.py] - INFO - Opening file
+2018-02-07 16:19:34,414 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:19:34,416 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:19:34,417 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:19:34,418 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:19:37,446 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:19:37,447 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:19:41,476 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:19:41,477 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:19:45,506 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:19:45,508 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:19:50,538 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:19:50,539 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:19:52,566 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:19:52,568 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:19:57,598 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:19:57,600 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:20:00,628 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:20:00,629 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:20:05,655 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:20:05,656 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:20:06,659 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:20:06,660 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:20:07,663 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:20:07,664 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:20:08,667 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:20:08,677 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:20:09,679 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:20:09,681 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:20:14,687 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:20:14,689 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:20:21,725 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:20:21,726 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:20:26,757 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:20:26,762 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:20:31,792 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:20:31,802 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:20:34,807 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:20:34,808 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:20:38,837 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:22:53,921 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:23:22,837 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:23:24,235 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:23:24,236 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:23:24,556 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:23:24,622 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:23:24,624 - [parse.py] - INFO - Opening file
+2018-02-07 16:23:24,625 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:23:24,627 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:23:24,628 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:23:24,629 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:23:27,657 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:23:27,658 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:23:31,687 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:23:31,688 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:23:35,717 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:23:35,718 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:23:40,748 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:23:40,750 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:23:42,776 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:23:42,778 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:23:47,808 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:23:47,809 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:23:50,837 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:23:50,838 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:23:55,864 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:23:55,865 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:23:56,868 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:23:56,870 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:23:57,872 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:23:57,874 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:23:58,876 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:23:58,878 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:23:59,880 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:23:59,882 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:24:04,889 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:24:04,890 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:24:11,922 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:24:11,923 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:24:16,953 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:24:16,955 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:24:21,988 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:24:21,990 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:24:24,996 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:24:24,998 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:24:29,027 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:24:30,883 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:27:24,946 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:27:26,445 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:27:26,446 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:27:26,782 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:27:26,899 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:27:26,901 - [parse.py] - INFO - Opening file
+2018-02-07 16:27:26,903 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:27:26,905 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:27:26,906 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:27:26,908 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:27:29,935 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:27:29,937 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:27:33,965 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:27:33,967 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:27:37,995 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:27:37,997 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:27:43,026 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:27:43,028 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:27:45,059 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:27:45,061 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:27:50,090 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:27:50,092 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:27:53,119 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:27:53,121 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:27:58,148 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:27:58,150 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:27:59,152 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:27:59,154 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:28:00,156 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:28:00,158 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:28:01,160 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:28:01,162 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:28:02,164 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:28:02,166 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:28:07,172 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:28:07,174 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:28:14,205 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:28:14,207 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:28:19,237 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:28:19,238 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:28:24,268 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:28:24,275 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:28:27,279 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:28:27,281 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:28:31,309 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:28:32,887 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:30:17,802 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:30:19,193 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:30:19,195 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:30:19,527 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:30:19,595 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:30:19,597 - [parse.py] - INFO - Opening file
+2018-02-07 16:30:19,599 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:30:19,601 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:30:19,603 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:30:19,605 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:30:22,631 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:30:22,632 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:30:26,658 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:30:26,659 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:30:30,684 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:30:30,685 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:30:35,710 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:30:35,711 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:30:37,736 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:30:37,737 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:30:42,762 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:30:42,764 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:30:45,791 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:30:45,793 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:30:50,817 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:30:50,819 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:30:51,867 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:30:51,869 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:30:52,872 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:30:52,874 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:30:53,876 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:30:53,878 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:30:54,881 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:30:54,883 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:30:59,890 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:30:59,891 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:31:06,917 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:31:06,918 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:31:11,943 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:31:11,945 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:31:16,976 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:31:16,978 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:31:19,985 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:31:19,986 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:31:24,015 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:31:24,016 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:36:46,855 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:36:48,225 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:36:48,227 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:36:48,595 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:36:48,662 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:36:48,664 - [parse.py] - INFO - Opening file
+2018-02-07 16:36:48,665 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:36:48,667 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:36:48,669 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:36:48,670 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:36:51,698 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:36:51,699 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:36:55,728 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:36:55,730 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:36:59,759 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:36:59,760 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:37:04,790 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:37:04,799 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:37:06,826 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:37:06,827 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:37:11,857 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:37:11,858 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:37:14,887 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:37:14,889 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:37:19,914 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:37:19,916 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:37:20,919 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:37:20,921 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:37:21,923 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:37:21,925 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:37:22,928 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:37:22,930 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:37:23,933 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:37:23,942 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:37:28,949 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:37:28,956 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:37:35,988 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:37:35,990 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:37:41,020 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:37:41,027 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:37:46,057 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:37:46,063 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:37:49,068 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:37:49,069 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:37:53,098 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:38:58,948 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:43:14,643 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:43:16,832 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:43:16,833 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:43:17,408 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:43:17,524 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:43:17,526 - [parse.py] - INFO - Opening file
+2018-02-07 16:43:17,527 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:43:17,529 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:43:17,530 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:43:17,531 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:43:20,559 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:43:20,610 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:43:24,639 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:43:24,640 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:43:28,665 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:43:28,667 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:43:33,696 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:43:33,702 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:43:35,729 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:43:35,730 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:43:40,760 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:43:40,761 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:43:43,789 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:43:43,790 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:43:48,815 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:43:48,816 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:43:49,819 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:43:49,821 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:43:50,823 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:43:50,825 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:43:51,827 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:43:51,829 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:43:52,831 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:43:52,833 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:43:57,839 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:43:57,841 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:44:04,873 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:44:04,874 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:44:09,904 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:44:09,910 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:44:14,939 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:44:14,944 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:44:17,949 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:44:17,950 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:44:21,976 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:44:55,176 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:48:08,415 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:48:09,732 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:48:09,733 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:48:10,053 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:48:10,169 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:48:10,171 - [parse.py] - INFO - Opening file
+2018-02-07 16:48:10,172 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:48:10,174 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:48:10,175 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:48:10,176 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:48:13,204 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:48:13,205 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:48:17,240 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:48:17,242 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:48:21,271 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:48:21,272 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:48:26,302 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:48:26,303 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:48:28,329 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:48:28,330 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:48:33,355 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:48:33,357 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:48:36,382 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:48:36,383 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:48:41,404 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:48:41,405 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:48:42,414 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:48:42,416 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:48:43,419 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:48:43,420 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:48:44,423 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:48:44,424 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:48:45,426 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:48:45,428 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:48:45,430 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:48:45,431 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:48:52,463 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:48:52,465 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:48:57,495 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:48:57,500 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:49:02,530 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:49:02,536 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:49:05,538 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:49:05,539 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:49:09,564 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:49:16,279 - [robotCommand.py] - ERROR - Action not found!
+2018-02-07 16:52:33,822 - [download.py] - INFO - Starting SSH connection
+2018-02-07 16:52:35,583 - [download.py] - INFO - Connected to IP via SSH
+2018-02-07 16:52:35,584 - [download.py] - INFO - Attempting to download file
+2018-02-07 16:52:35,952 - [download.py] - INFO - Successfully downloaded file
+2018-02-07 16:52:36,019 - [download.py] - INFO - Closed SSH connection
+2018-02-07 16:52:36,020 - [parse.py] - INFO - Opening file
+2018-02-07 16:52:36,021 - [parse.py] - INFO - Begin parsing actions.json
+2018-02-07 16:52:36,023 - [parse.py] - INFO - Compiling commands
+2018-02-07 16:52:36,024 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:52:36,025 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:52:39,053 - [parse.py] - INFO - Sending action backward for 4 seconds.
+2018-02-07 16:52:39,054 - [robotCommand.py] - INFO - Moving robot backward for 4 seconds.
+2018-02-07 16:52:43,083 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:52:43,085 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:52:47,114 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:52:47,115 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:52:52,145 - [parse.py] - INFO - Sending action backward for 2 seconds.
+2018-02-07 16:52:52,152 - [robotCommand.py] - INFO - Moving robot backward for 2 seconds.
+2018-02-07 16:52:54,179 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:52:54,180 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:52:59,210 - [parse.py] - INFO - Sending action forward for 3 seconds.
+2018-02-07 16:52:59,212 - [robotCommand.py] - INFO - Moving robot forward for 3 seconds.
+2018-02-07 16:53:02,240 - [parse.py] - INFO - Sending action stop for 5 seconds.
+2018-02-07 16:53:02,241 - [robotCommand.py] - INFO - Stopping robot activity for 5 seconds.
+2018-02-07 16:53:07,266 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:53:07,268 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:53:08,270 - [parse.py] - INFO - Sending action led_blue for 1 seconds.
+2018-02-07 16:53:08,272 - [robotCommand.py] - INFO - Blue LED for 1 seconds.
+2018-02-07 16:53:09,274 - [parse.py] - INFO - Sending action led_green for 1 seconds.
+2018-02-07 16:53:09,276 - [robotCommand.py] - INFO - Green LED 1 seconds.
+2018-02-07 16:53:10,278 - [parse.py] - INFO - Sending action led_red for 1 seconds.
+2018-02-07 16:53:10,280 - [robotCommand.py] - INFO - Red LED for 1 seconds.
+2018-02-07 16:53:11,282 - [parse.py] - INFO - Sending action play_sound for 5 seconds.
+2018-02-07 16:53:11,284 - [robotCommand.py] - INFO - Playing sound for 5 seconds.
+2018-02-07 16:53:16,290 - [parse.py] - INFO - Sending action right for 7 seconds.
+2018-02-07 16:53:16,292 - [robotCommand.py] - INFO - Turning robot right for 7 seconds.
+2018-02-07 16:53:23,318 - [parse.py] - INFO - Sending action left for 5 seconds.
+2018-02-07 16:53:23,319 - [robotCommand.py] - INFO - Turning robot left for 5 seconds.
+2018-02-07 16:53:28,344 - [parse.py] - INFO - Sending action right for 5 seconds.
+2018-02-07 16:53:28,346 - [robotCommand.py] - INFO - Turning robot right for 5 seconds.
+2018-02-07 16:53:33,376 - [parse.py] - INFO - Sending action led_green for 3 seconds.
+2018-02-07 16:53:33,377 - [robotCommand.py] - INFO - Green LED 3 seconds.
+2018-02-07 16:53:36,381 - [parse.py] - INFO - Sending action forward for 4 seconds.
+2018-02-07 16:53:36,383 - [robotCommand.py] - INFO - Moving robot forward for 4 seconds.
+2018-02-07 16:53:40,412 - [parse.py] - INFO - Sending action unknown for 5 seconds.
+2018-02-07 16:53:40,413 - [robotCommand.py] - ERROR - Action not found!

@@ -51,9 +51,9 @@ def buzzOn():
   buzz.start(50)
 
 def buzzOff():
-  buzz = GPIO.PWM(BUZZERPIN)  
+  buzz = GPIO.PWM(BUZZERPIN, 440)  
   buzz.stop()
-  GPIO.output(BUZZERPIN, 0)
+  #GPIO.output(BUZZERPIN, 0)
   
 #-------------RGB Controls--------------------------
 def redOn():

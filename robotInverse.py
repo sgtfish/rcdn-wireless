@@ -55,10 +55,14 @@ class Robot(object):
         speed = max(0, min(255, speed))  # Constrain speed to 0-255 after trimming.
         self._right.setSpeed(speed)
 
-    def stop(self):
+    def stop(self, speed, seconds=None):
         """Stop all movement."""
+        #pdb.set_trace()
         self._left.run(Adafruit_MotorHAT.RELEASE)
         self._right.run(Adafruit_MotorHAT.RELEASE)
+        if seconds is not None:
+            time.sleep(seconds)
+            self.stop(seconds)
 
     def backward(self, speed, seconds=None):
         """Move forward at the specified speed (0-255).  Will start moving
@@ -73,9 +77,10 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
 
     def forward(self, speed, seconds=None):
+        #pdb.set_trace()
         """Move backward at the specified speed (0-255).  Will start moving
         backward and return unless a seconds value is specified, in which
         case the robot will move backward for that amount of time and then stop.
@@ -88,7 +93,7 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
 
     def right(self, speed, seconds=None):
         """Spin to the right at the specified speed.  Will start spinning and
@@ -103,7 +108,7 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
     
     def rightTurn(self, speed, seconds=None):
         self._right_speed(speed)
@@ -113,7 +118,7 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
  
     def left(self, speed, seconds=None):
         """Spin to the left at the specified speed.  Will start spinning and
@@ -128,7 +133,7 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
 
     def leftTurn(self, speed, seconds=None):
         self._right_speed(0)
@@ -138,7 +143,7 @@ class Robot(object):
         # If an amount of time is specified, move for that time and then stop.
         if seconds is not None:
             time.sleep(seconds)
-            self.stop()
+            self.stop(seconds)
 
 
 

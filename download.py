@@ -13,7 +13,6 @@ def ssh(ip, filepath, userid, password, filename):
   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
   try:
-    pdb.set_trace()
     syslogger.log(FACILITY,"INFO","Starting SSH connection")
     ssh.connect(ip, 22, userid, password)
     sftp = ssh.open_sftp()
@@ -30,7 +29,6 @@ def ssh(ip, filepath, userid, password, filename):
     sys.exit(1)
 
 def ftp(ip, filepath, userid, password, filename):
-  pdb.set_trace()
   syslogger.log(FACILITY,"INFO","Connecting to FTP server")
   try:
     ftp = FTP(ip)
@@ -62,4 +60,15 @@ def html(ip, filepath, userid, password, filename):
     syslogger.log(FACILITY,"INFO","Closed HTML connection") # HTTP connection?
   except:
     syslogger.log(FACILITY,"ERROR","Failed to connect or download file")
+    sys.exit(1)
+
+def downloadFile(downloadMethod, ip, directory, username, password, fileName):
+  if(downloadMethod == "ssh"):
+    ssh(ip,directory,username,password,fileName)
+  elif(downloadMethod == "ftp"):
+    ftp(ip,directory,username,password,fileName)
+  elif(downloadMethod == "html"):
+    html(ip,directory,username,password,fileName)
+  else:
+    syslogger.log("Main","ERROR","Invalid download method")
     sys.exit(1)

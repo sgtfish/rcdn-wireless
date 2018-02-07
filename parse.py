@@ -2,6 +2,7 @@ import json
 import syslogger
 import robotCommand
 import sys
+import pdb
 
 FACILITY = "parse.py"
 
@@ -21,13 +22,14 @@ def parseFile(fileName):
     sys.exit(1)
 
   try:
+    #pdb.set_trace()
     syslogger.log(FACILITY,"INFO","Compiling commands")
     for i in range(cmd_count):
       action = cmds[i]['action']
-      duration = cmds[i]['duration']
+      time = cmds[i]['time']
 
-      syslogger.log(FACILITY,"INFO","Sending action " + action + " for " + str(duration) + " seconds.")
-      robotCommand.command(action,duration)
+      syslogger.log(FACILITY,"INFO","Sending action " + action + " for " + str(time) + " seconds.")
+      robotCommand.command(action,time)
   except:
     syslogger.log(FACILITY,"ERROR","Failed to parse file")
     sys.exit(1)
