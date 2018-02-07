@@ -8,18 +8,19 @@ import download
 import parse
 import syslogger
 import sys
+import argparse
 
 #FTP - Requires no directory input = ""
 #HTML - Requires '/' for directory
 #SSH - Requires full pwd for directory
 
-def main():
-  downloadMethod = "ssh"
-  ip = "10.154.66.159"
-  directory = "/home/pi/sftp/"
-  username = "pi"
-  password = "raspberry"
-  fileName = "actions.json"
+def main(downloadMethod, ip, username, password, directory, fileName):
+  #downloadMethod = "ssh"
+  #ip = "10.154.66.159"
+  #directory = "/home/pi/sftp/"
+  #username = "pi"
+  #password = "raspberry"
+  #fileName = "actions.json"
 
   download.downloadFile(downloadMethod, ip, directory, username, password, fileName)  
 
@@ -41,10 +42,9 @@ def main():
 
 
 if __name__ == '__main__':
-  """
-  ---------------------------------
-  Method 1: using argparse module
-  ---------------------------------
+  #---------------------------------
+  #Method 1: using argparse module
+  #---------------------------------
   parser = argparse.ArgumentParser()
   parser.add_argument("downloadMethod", help="The download method to use (ssh, ftp, or http)")
   parser.add_argument("ip", help="The ip address of the server")
@@ -60,7 +60,7 @@ if __name__ == '__main__':
   password = args.password
   directory = args.directory
   fileName = args.fileName
-  
+  """ 
   ---------------------------------
   Method 2: using sys.argv
   ---------------------------------
