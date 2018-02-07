@@ -4,7 +4,7 @@ from ftplib import FTP
 import pdb
 import sys
 
-local_dir = '/home/pi/Piathlon/'
+local_dir = '/home/pi/rcdn-wireless/'
 
 FACILITY = "download.py"
 
@@ -13,11 +13,13 @@ def ssh(ip, filepath, userid, password, filename):
   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
   try:
+    pdb.set_trace()
     syslogger.log(FACILITY,"INFO","Starting SSH connection")
     ssh.connect(ip, 22, userid, password)
     sftp = ssh.open_sftp()
-
-    syslogger.log(FACILITY,"INFO","Downloading file.")
+    syslogger.log(FACILITY,"INFO","Connected to IP via SSH")
+  
+    syslogger.log(FACILITY,"INFO","Attempting to download file")
     sftp.get(filepath + filename, local_dir + filename)
     syslogger.log(FACILITY,"INFO","Successfully downloaded file")
     sftp.close()
@@ -25,6 +27,7 @@ def ssh(ip, filepath, userid, password, filename):
     syslogger.log(FACILITY,"INFO","Closed SSH connection")
   except:
     syslogger.log(FACILITY,"ERROR","Failed to connect or download file")
+    sys.exit(1)
 
 def ftp(ip, filepath, userid, password, filename):
   pdb.set_trace()
@@ -59,3 +62,4 @@ def html(ip, filepath, userid, password, filename):
     syslogger.log(FACILITY,"INFO","Closed HTML connection") # HTTP connection?
   except:
     syslogger.log(FACILITY,"ERROR","Failed to connect or download file")
+    sys.exit(1)
