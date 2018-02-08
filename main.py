@@ -14,6 +14,8 @@ import argparse
 #HTML - Requires '/' for directory
 #SSH - Requires full pwd for directory
 
+settings_file = "settings.json"
+
 def main(downloadMethod, ip, username, password, directory, fileName):
   #downloadMethod = "ssh"
   #ip = "10.154.66.159"
@@ -42,48 +44,46 @@ def main(downloadMethod, ip, username, password, directory, fileName):
 
 
 if __name__ == '__main__':
-  #---------------------------------
-  #Method 1: using argparse module
-  #---------------------------------
+
   parser = argparse.ArgumentParser()
   parser.add_argument("downloadMethod", help="The download method to use (ssh, ftp, or http)")
-  parser.add_argument("ip", help="The ip address of the server")
-  parser.add_argument("username", help="Username for logging in")
-  parser.add_argument("password", help="Password of username")
-  parser.add_argument("directory", help="The directory where the file is located on the server")
-  parser.add_argument("fileName", help="Name of file to be used for parsing")
+
   args = parser.parse_args()
     
   downloadMethod = args.downloadMethod
-  ip = args.ip
-  username = args.username
-  password = args.password
-  directory = args.directory
-  fileName = args.fileName
-  """ 
-  ---------------------------------
-  Method 2: using sys.argv
-  ---------------------------------
-  if sys.argv[1] == "-h" and len(sys.argv) == 2:
-    print "Help:\n"
-    print "  downloadMetod    The download method to use (ssh, ftp, or http)"
-    print "  ip               The ip address of the server"
-    print "  username         Username for logging in"
-    print "  password         Password of username"
-    print "  directory        The directory where the file is located on the server"
-    print "  fileName         Name of file to be used for parsing"
+  
+  if downloadMethod not in ["ssh", "ftp", "http"]:
+      print "error: invalid download method: " + downloadMethod
+      sys.exit(1)
+  
+  # getting the rest of the config from file
+  try:
+    with open(settings_file, "r") as f:
+      try:
+        settings = json.load(f)
+        
+        # server settings
+        ip = settings[0]["server"]["ip"]
+        username = settings[0]["server"]["username"]
+        password = settings[0]["server"]["password"]
+        fileName = settings[0]["server"]["fileName"]
+        
+        # directory settings (ssh, ftp, or http)
+        if downloadMethod == "ssh":
+          directory = settings[1]["directories"]["ssh"]
+        elif downloadMethod == "http":
+          directory = settings[1]["directories"]["http"]
+        else:
+          directory = settings[1]["directories"]["ftp"]
+        
+      except:
+          print "error: could not get settings"
+          sys.exit(1)   
+          
+  except:
+    print "error: settings file not found: " + settings_file
     sys.exit(1)
-  if len(sys.argv[1:]) != 6:
-    print "error: not enough arguments"
-    print "usage: main.py [-h] downloadMethod ip username password directory fileName"
-    sys.exit(1) 
-   
-  downloadMethod = sys.argv[1]
-  ip = sys.argv[2]
-  username = sys.argv[3]
-  password = sys.argv[4]
-  directory = sys.argv[5]
-  fileName = sys.argv[6]  
-  """
+    
+
   main(downloadMethod, ip, username, password, directory, fileName)
   
