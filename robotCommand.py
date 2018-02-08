@@ -34,7 +34,9 @@ def command(action, duration):
     robot.rightTurn(SPEED, duration)
 
   elif action == "play_sound":
+    #pdb.set_trace()
     syslogger.log(FACILITY, "INFO", "Playing sound for " +str(duration)+ " seconds.")
+    #robotGPIO.buzzOn(duration)    
     buzzer.buzz(duration)
 
   elif action == "led_blue":

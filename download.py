@@ -49,6 +49,7 @@ def ftp(ip, filepath, userid, password, filename):
 def html(ip, filepath, userid, password, filename):
   syslogger.log(FACILITY,"INFO","Connecting to HTML server") # HTTP server?
   try:
+    # pdb.set_trace()
     url = "http://" + ip + filepath + filename
     syslogger.log(FACILITY,"INFO","Downloading file")
     response = urllib.urlopen(url).read()
@@ -63,6 +64,7 @@ def html(ip, filepath, userid, password, filename):
     sys.exit(1)
 
 def downloadFile(downloadMethod, ip, directory, username, password, fileName):
+  # pdb.set_trace()
   if(downloadMethod == "ssh"):
     ssh(ip,directory,username,password,fileName)
   elif(downloadMethod == "ftp"):

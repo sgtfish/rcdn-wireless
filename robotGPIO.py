@@ -34,6 +34,8 @@ GPIO.setup(OBSTACLEPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(TEMPDIGI, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(TILTPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+buzz = GPIO.PWM(BUZZERPIN, 440)
+
 #------------Sensor Controls------------------------
 def rightSensor():
   return GPIO.input(RIGHT)
@@ -47,11 +49,15 @@ def leftSensor():
 #buzz = GPIO.PWN(BUZZERPIN, 440)
 
 def buzzOn():
-  buzz = GPIO.PWM(BUZZERPIN, 440)
+  #buzz = GPIO.PWM(BUZZERPIN, 440)
+  global buzz
   buzz.start(50)
+  #time.sleep(duration)
+  #buzz.stop()
 
 def buzzOff():
-  buzz = GPIO.PWM(BUZZERPIN, 440)  
+  global buzz
+  #buzz = GPIO.PWM(BUZZERPIN, 440)  
   buzz.stop()
   #GPIO.output(BUZZERPIN, 0)
   

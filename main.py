@@ -9,6 +9,7 @@ import parse
 import syslogger
 import sys
 import argparse
+import json
 
 #FTP - Requires no directory input = ""
 #HTML - Requires '/' for directory
@@ -46,13 +47,13 @@ def main(downloadMethod, ip, username, password, directory, fileName):
 if __name__ == '__main__':
 
   parser = argparse.ArgumentParser()
-  parser.add_argument("downloadMethod", help="The download method to use (ssh, ftp, or http)")
+  parser.add_argument("downloadMethod", help="The download method to use (ssh, ftp, or html)")
 
   args = parser.parse_args()
     
   downloadMethod = args.downloadMethod
   
-  if downloadMethod not in ["ssh", "ftp", "http"]:
+  if downloadMethod not in ["ssh", "ftp", "html"]:
       print "error: invalid download method: " + downloadMethod
       sys.exit(1)
   
@@ -60,8 +61,9 @@ if __name__ == '__main__':
   try:
     with open(settings_file, "r") as f:
       try:
+	#pdb.set_trace()
         settings = json.load(f)
-        
+        # pdb.set_trace()
         # server settings
         ip = settings[0]["server"]["ip"]
         username = settings[0]["server"]["username"]
@@ -71,8 +73,8 @@ if __name__ == '__main__':
         # directory settings (ssh, ftp, or http)
         if downloadMethod == "ssh":
           directory = settings[1]["directories"]["ssh"]
-        elif downloadMethod == "http":
-          directory = settings[1]["directories"]["http"]
+        elif downloadMethod == "html":
+          directory = settings[1]["directories"]["html"]
         else:
           directory = settings[1]["directories"]["ftp"]
         
