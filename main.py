@@ -25,6 +25,10 @@ def main(downloadMethod, ip, username, password, directory, fileName):
   #password = "raspberry"
   #fileName = "actions.json"
 
+  #Hot fix to address tone change on first buzz
+  robotGPIO.buzzOn()
+  robotGPIO.buzzOff()
+
   download.downloadFile(downloadMethod, ip, directory, username, password, fileName)  
 
   #if(downloadMethod == "ssh"):

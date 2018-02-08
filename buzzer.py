@@ -8,7 +8,7 @@ def buzz(duration):
   robotGPIO.buzzOff()
  
 def beep(duration):
-  INTERVAL = 1
+  INTERVAL = .5
   while duration > 0:
     #pdb.set_trace()    
     robotGPIO.buzzOn()
@@ -19,3 +19,4 @@ def beep(duration):
       return
     time.sleep(INTERVAL)
     duration = duration - INTERVAL
+

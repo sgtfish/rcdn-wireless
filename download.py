@@ -3,6 +3,8 @@ import syslogger
 from ftplib import FTP
 import pdb
 import sys
+import robotGPIO
+import buzzer
 
 local_dir = '/home/pi/rcdn-wireless/'
 
@@ -23,6 +25,9 @@ def ssh(ip, filepath, userid, password, filename):
     syslogger.log(FACILITY,"INFO","Successfully downloaded file")
     sftp.close()
     ssh.close()
+    robotGPIO.greenOn()
+    buzzer.beep(5)
+    robotGPIO.greenOff()
     syslogger.log(FACILITY,"INFO","Closed SSH connection")
   except:
     syslogger.log(FACILITY,"ERROR","Failed to connect or download file")
@@ -39,6 +44,9 @@ def ftp(ip, filepath, userid, password, filename):
     ftp.retrbinary('RETR ' + filepath + filename, file.write, 1024)
     syslogger.log(FACILITY,"INFO","Successfully downloaded file")
 
+    robotGPIO.greenOn()
+    buzzer.beep(5)
+    robotGPIO.greenOff()
     ftp.quit()
     file.close()
     syslogger.log(FACILITY,"INFO","Closed FTP connection")
@@ -58,6 +66,9 @@ def html(ip, filepath, userid, password, filename):
     f.write(response)
     syslogger.log(FACILITY,"INFO","Successfully downloaded file")
     f.close
+    robotGPIO.greenOn()
+    buzzer.beep(5)
+    robotGPIO.greenOff()
     syslogger.log(FACILITY,"INFO","Closed HTML connection") # HTTP connection?
   except:
     syslogger.log(FACILITY,"ERROR","Failed to connect or download file")

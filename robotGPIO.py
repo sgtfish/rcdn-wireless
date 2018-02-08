@@ -51,7 +51,7 @@ def leftSensor():
 def buzzOn():
   #buzz = GPIO.PWM(BUZZERPIN, 440)
   global buzz
-  buzz.start(50)
+  buzz.start(75)
   #time.sleep(duration)
   #buzz.stop()
 
