@@ -2,7 +2,7 @@
     {
         "server":
         {
-            "ip": "10.154.66.159",
+            "ip" : "10.154.66.159",
             "username" : "pi",
             "password" : "raspberry",
             "fileName" : "actions.json"
