@@ -110,7 +110,7 @@ def detectTilt():
 # Still need to do inital config, see link below
 # https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf
 #
-
+"""
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
@@ -135,7 +135,7 @@ def read_temp():
     temp_c = float(temp_string) / 1000.0
     temp_f = temp_c * 9.0 / 5.0 + 32.0
     return temp_c
-
+"""
 #-----------Obstacle detection control--------------
 def detectObstacle():
   value = GPIO.input(OBSTACLEPIN)

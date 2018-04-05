@@ -6,9 +6,7 @@ import RobotGPIO
 import Multisensor_Road_Trip as Module2
 import os
 import pdb
-import TempRead
 import sqlite3
-import SpinningPumpkin
 
 # Trim:
 # Negative value slows down the motor
@@ -24,15 +22,11 @@ tiltedRobot = False
 #  - right_id: The ID of the right motor, default is 2.
 robot = RobotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)
 
-pumpkin = SpinningPumpkin.Robot()
-
 # Return the concatonated values of the sensor inputs (number of possible states == 2^(number_of_sensors)-1)
 def sensorRead():
   L = RobotGPIO.leftSensor()
   R = RobotGPIO.rightSensor()
   return str(L)+str(R)
-
-
 
 # Return the positive or negative error value, dependent upon the current state of the sensors
 # Positive value == Turn Left
@@ -167,13 +161,7 @@ def main():
   setMotorSpeeds(INIT_SPEED, INIT_SPEED)  # Tell the robot to move forward once program is started
   
   count = 0
-  tempFlag = False
 
-  os.system("sudo ./TempRead.py &")  # Automatically run TempRead program in the background. Does not get kill'd with pidtrace.py. Also insecure, but whatever
-  conn = sqlite3.connect("temp.db")  # initialize DB interaction for TempRead'ing
-  c = conn.cursor()
-
-  pumpkin._spin_right(75)
 
   while(1):
     
@@ -186,17 +174,6 @@ def main():
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)
       LSPEED, RSPEED = scaleSpeed(LSPEED, RSPEED)  # Need to run this twice because of some logical issue that can occur by scaling one speed before the other
       setMotorSpeeds(LSPEED, RSPEED)
-
-    # === Temp Read 4 (sqlite3) === #
-    c.execute("SELECT * FROM temps WHERE id = 1")
-    temp = c.fetchone()[0]
-    if (temp >= 32 and not tempFlag):
-      tempFlag = True
-      setMotorSpeeds(0,0)
-      Module2.detectedHighTemp()
-      setMotorSpeeds(LSPEED, RSPEED)
-    if (temp < 32 and tempFlag):
-      tempFlag = False
 
     # === Obstacle Detecting === #
     if(RobotGPIO.detectObstacle() == 0):
