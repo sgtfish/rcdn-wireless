@@ -122,12 +122,12 @@ def scaleSpeed(LSPEED, RSPEED):
       RSPEED = -255
   return LSPEED,RSPEED
 
-def calculatePID(error_previous, i):
+def runPID(INIT_SPEED, error_previous, i):
   error = errorEval2(sensorRead(), error_previous)
   pidValue, i = calculatePID(error, error_previous, i)
   if pidValue != error_previous:
-    lSpeed = init_speed - pidValue
-    rSpeed = init_speed + pidvalue
+    lSpeed = INIT_SPEED - pidValue
+    rSpeed = INIT_SPEED + pidValue
 
     lSpeed, rSpeed = scaleSpeed(lSpeed, rSpeed)#-\_ Need to run this twice because of some logical issue that can occur
     lSpeed, rSpeed = scaleSpeed(lSpeed, rSpeed)#-/  by scaling one speed before the other -Ken

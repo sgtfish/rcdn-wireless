@@ -21,10 +21,10 @@ def main():
   
   robot = RobotInverse.Robot(left_trim=LEFT_TRIM, right_trim=RIGHT_TRIM)  
   RobotGPIO.greenOn()
-  setMotorSpeeds(lSpeed, rSpeed)
+  pid.setMotorSpeeds(lSpeed, rSpeed)
 
   while(1):
-    lSpeed, rSpeed = pid.calculatePID(error_previous, i)
+    lSpeed, rSpeed = pid.runPID(INIT_SPEED, error_previous, i)
 
 if __name__ == '__main__':
 
