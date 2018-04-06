@@ -32,7 +32,7 @@ def parse_int_brief():
     
 
 # module testing    
-if __name__ == "__main__"
+if __name__ == "__main__":
 
     total = parse_int_brief()
     print(total)
